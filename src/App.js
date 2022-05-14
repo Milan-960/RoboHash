@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-import "./App.css";
 import CardList from "./Components/CardList";
 import { robots } from "./Components/Robots";
+import "./App.css";
 import Search from "./Components/Search";
 
 // function App() {
@@ -30,15 +30,24 @@ class App extends Component {
       searchfield: "",
     };
   }
+
+  onSearchChange = (event) => {
+    this.setState({ searchfield: event.target.value });
+  };
+
   render() {
-    return (
-      <>
-        <div className="App">
-          <h1>Robo Friend!!</h1>
-          <Search />
-          <CardList robots={robots} />
-        </div>
-      </>
+    const { robots, searchfield } = this.state;
+    const filteredRobots = robots.filter((robot) => {
+      return robot.name.toLowerCase().includes(searchfield.toLowerCase());
+    });
+    return !robots.length ? (
+      <h1>Loading</h1>
+    ) : (
+      <div className="App">
+        <h1>RoboFriends</h1>
+        <Search searchChange={this.onSearchChange} />
+        <CardList robots={filteredRobots} />
+      </div>
     );
   }
 }

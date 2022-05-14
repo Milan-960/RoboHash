@@ -1,15 +1,13 @@
 import React from "react";
 
-const Search = () => {
-
- 
-
+const Search = ({ searchfield, searchChange }) => {
   return (
     <>
       <input
         className="searchInput"
         type="search"
         placeholder="search robots"
+        onChange={searchChange}
       />
     </>
   );
