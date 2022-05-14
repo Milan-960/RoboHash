@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 
 import CardList from "./Components/CardList";
-import { robots } from "./Components/Robots";
+// import { robots } from "./Components/Robots";
 import "./App.css";
 import Search from "./Components/Search";
+import Scroll from "./Components/Scroll";
 
 // function App() {
 //   const state = {
@@ -56,9 +57,11 @@ class App extends Component {
       <h1>Loading</h1>
     ) : (
       <div className="App">
-        <h1>RoboFriends</h1>
+        <h1>Robo Friends</h1>
         <Search searchChange={this.onSearchChange} />
-        <CardList robots={filteredRobots} />
+        <Scroll>
+          <CardList robots={filteredRobots} />
+        </Scroll>
       </div>
     );
   }
