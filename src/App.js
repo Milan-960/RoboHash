@@ -5,6 +5,7 @@ import CardList from "./Components/CardList";
 import "./App.css";
 import Search from "./Components/Search";
 import Scroll from "./Components/Scroll";
+import ErrorBoundry from "./Components/ErrorBoundary";
 
 // function App() {
 //   const state = {
@@ -60,7 +61,9 @@ class App extends Component {
         <h1>Robo Friends</h1>
         <Search searchChange={this.onSearchChange} />
         <Scroll>
-          <CardList robots={filteredRobots} />
+          <ErrorBoundry>
+            <CardList robots={filteredRobots} />
+          </ErrorBoundry>
         </Scroll>
       </div>
     );

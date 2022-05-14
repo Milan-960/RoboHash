@@ -16,6 +16,10 @@ const CardList = ({ robots }) => {
   //   );
   // });
 
+  // if (true) {
+  //   throw new Error("noooo! This is not good");
+  // }
+
   return (
     <>
       <div className="card">
