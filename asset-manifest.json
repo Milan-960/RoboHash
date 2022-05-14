@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/RoboHash/static/css/main.8e30db67.css",
+    "main.js": "/RoboHash/static/js/main.988e3663.js",
+    "static/js/787.88b75bc3.chunk.js": "/RoboHash/static/js/787.88b75bc3.chunk.js",
+    "service-worker.js": "/RoboHash/service-worker.js",
+    "index.html": "/RoboHash/index.html",
+    "main.8e30db67.css.map": "/RoboHash/static/css/main.8e30db67.css.map",
+    "main.988e3663.js.map": "/RoboHash/static/js/main.988e3663.js.map",
+    "787.88b75bc3.chunk.js.map": "/RoboHash/static/js/787.88b75bc3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8e30db67.css",
+    "static/js/main.988e3663.js"
+  ]
+}
